@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { useFrame } from '@react-three/fiber'
+import { easing } from 'maath'
+import { useSnapshot } from 'valtio'
 
-const Camerarig = () => {
+import state from '../store'
+
+const CameraRig = ({ children }) => {
+    const group = useRef()
+    const snap
   return (
-    <div>Camerarig</div>
+    <group ref={group}>{children}</group>
   )
 }
 
-export default Camerarig
+export default CameraRig
