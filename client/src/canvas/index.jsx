@@ -1,9 +1,10 @@
 import React from 'react'
+import { Canvas } from 'react-three/fiber'
 
-const Canvas = () => {
+const CanvasModel = () => {
   return (
-    <div>Canvas</div>
+    <div>CanvasModel</div>
   )
 }
 
-export default Canvas
+export default CanvasModel
