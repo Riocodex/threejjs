@@ -17,6 +17,7 @@ const CameraRig = ({ children }) => {
 
         //set thhe initial position of the model 
         let targetPosition = [-0.4,0,2]//best default positions imo
+        //adjust positions depending on the device
         if (snap.intro){
             if(isBreakpoint) targetPosition = [0,0,2];
             if(isMobile) targetPosition = [0, 0.2, 2.5];
@@ -24,6 +25,9 @@ const CameraRig = ({ children }) => {
             if(isMobile)targetPosition = [0,0,2.5]
             else targetPosition = [0,0,2]
         }
+
+        //set model camera position
+        easing.damp3(state.camera.position, targetPosition, 0.25, delta)
 
 
           //set model rotation smoothly
