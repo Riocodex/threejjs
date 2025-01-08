@@ -17,9 +17,10 @@ const Shirt = () => {
     //to add smooth colors
     useFrame((state, delta)=>easing.dampC(materials.lambert1.color,snap.color,0.25,delta))
 
-    const state
+    //this is to make sure the shirt updates because sometimes it doesnt..state is saved ina  variable and passed in the key so reacct renders te model whenever the state changes
+    const stateString = JSON.stringify(snap)
   return (
-    <group>
+    <group key={stateString}> 
         <mesh
             castShadow
             geometry={nodes.T_Shirt_male.geometry}
