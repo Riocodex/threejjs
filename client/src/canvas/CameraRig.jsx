@@ -13,7 +13,7 @@ const CameraRig = ({ children }) => {
 
         //to make shirt responsive on all devices
         const isBreakpoint = window.innerWidth <= 1260;
-        const isMobile = window.inner
+        const isMobile = window.innerWidth <= 600;
 
         //set thhe initial position of the model 
         let targetPosition = [-0.4,0,2]//best default positions imo
@@ -28,7 +28,6 @@ const CameraRig = ({ children }) => {
 
         //set model camera position
         easing.damp3(state.camera.position, targetPosition, 0.25, delta)
-
 
           //set model rotation smoothly
     easing.dampE(
