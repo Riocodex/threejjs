@@ -8,7 +8,6 @@ import state from '../store'
 
 const Shirt = () => {
     const snap = useSnapshot(state)
-    console.log(snap)
     const{nodes, materials}= useGLTF('/shirt_baked.glb')
 
     const logoTexture = useTexture(snap.logoDecal)
